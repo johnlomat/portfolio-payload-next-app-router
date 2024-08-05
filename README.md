@@ -25,6 +25,8 @@
 - **Flowbite React**: Component library for pre-built UI components integrated with Tailwind CSS.
 - **Vercel**: Hosting platform for static websites and projects, providing seamless deployment and hosting.
 - **Payload CMS**: Headless CMS for managing and delivering dynamic content.
+- **Node.js**: Runtime environment for server-side logic and API handling.
+- **Nodemailer**: Node.js module for sending emails from the contact form.
 
 ## Deployment
 
