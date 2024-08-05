@@ -1,0 +1,42 @@
+{
+  "name": "portfolio-payload-next-app-router",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3005",
+    "build": "next build -p 3005",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@next/third-parties": "^14.2.5",
+    "axios": "^1.7.3",
+    "escape-html": "^1.0.3",
+    "flowbite-react": "^0.10.1",
+    "next": "14.2.5",
+    "nodemailer": "^6.9.14",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/escape-html": "^1.0.4",
+    "@types/node": "^20",
+    "@types/nodemailer": "^6.4.15",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "slate": "^0.103.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
