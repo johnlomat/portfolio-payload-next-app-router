@@ -20,7 +20,7 @@ export async function generateMetadata() {
   return {
     title: meta.title,
     description: meta.description,
-    keywords: meta.keywords.join(', '),
+    keywords: meta.keywords.join(', ') || null,
     openGraph: {
       title: meta.title,
       description: meta.description,
