@@ -6,7 +6,7 @@
 
 ## Features
 
-- **Dynamic Content Management**: Integrated with Payload CMS for managing and delivering dynamic content.
+- **Dynamic Content Management**: Integrated with headless Payload CMS for managing and delivering dynamic content.
 - **ISR Rendering**: Utilizes Next.js Incremental Static Regeneration (ISR) to update static content without rebuilding the entire site.
 - **Tailwind CSS**: Provides a utility-first CSS framework for fast and responsive design.
 - **React Components**: Uses React for interactive user interfaces and state management.
