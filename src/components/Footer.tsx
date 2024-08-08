@@ -18,7 +18,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="font-montserrat bg-neutral-900 py-12">
+    <footer className="bg-neutral-900 py-12 font-montserrat">
       <div className="container flex flex-wrap space-y-6">
         <div className="flex w-full flex-col items-center justify-center">
           <button
@@ -59,7 +59,7 @@ const Footer = () => {
             className="flex h-[3rem] w-[3rem] items-center justify-center rounded-full hover:bg-white/30"
           >
             <Image
-              src="/images/oj-logo-icon.webp"
+              src="/images/oj-logo-icon.png"
               alt="OnlineJobs PH logo"
               width={30}
               height={33}
