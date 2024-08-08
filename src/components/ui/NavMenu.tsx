@@ -36,7 +36,6 @@ const NavMenu = ({ isMenuOpen, toggleMenu }: { isMenuOpen: boolean; toggleMenu: 
             href={{ pathname: '/', hash: 'about-me' }}
             className="font-bold text-[#212121] hover:text-gray-300 md:text-white"
             onClick={handleClick}
-            scroll={false}
           >
             About me
           </Link>
