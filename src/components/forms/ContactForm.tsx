@@ -7,6 +7,7 @@ import { faCircleCheck, faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import useContactForm from '@/hooks/useContactForm'
 import sendEmail from '@/services/sendEmail'
 import ButtonTheme from '@/components/themes/flowbite-react/ButtonTheme'
+import { cn } from '@/lib/utils'
 
 export default function ContactForm() {
   const { values, handleChange, resetForm } = useContactForm()
@@ -111,9 +112,11 @@ export default function ContactForm() {
         <Toast className="fixed bottom-4 left-1/2 z-10 m-0 w-4/5 max-w-none -translate-x-1/2 p-4 md:w-auto">
           <FontAwesomeIcon
             icon={responseMessage.isSuccessful ? faCircleCheck : faCircleXmark}
-            className={`text-2xl ${responseMessage.isSuccessful ? 'text-green-400' : 'text-red-600'}`}
+            className={cn('text-2xl text-red-600', {
+              'text-green-400': responseMessage.isSuccessful,
+            })}
           />
-          <div className="font-open-sans mx-3 text-sm">{responseMessage.message}</div>
+          <div className="mx-3 font-open-sans text-sm">{responseMessage.message}</div>
           <ToastToggle className="flex items-center justify-center" />
         </Toast>
       )}

@@ -7,6 +7,7 @@ import Link from 'next/link'
 import NavMenu from '@/components/ui/NavMenu'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { cn } from '@/lib/utils'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -44,13 +45,12 @@ const Header = () => {
     }
   }, [isMenuOpen])
 
-  // Determine the background color based on the current route
-  const headerBgColor = pathname === '/' ? 'bg-[#969696] xl:bg-transparent' : 'bg-[#969696]'
-
-  const logoColor = pathname === '/' ? 'brightness-[100] md:brightness-0' : 'brightness-[100]'
-
   return (
-    <header className={`static z-10 w-full ${headerBgColor} py-4 md:absolute`}>
+    <header
+      className={cn('static z-10 w-full bg-[#969696] py-4 md:absolute', {
+        'bg-[#969696] xl:bg-transparent': pathname === '/',
+      })}
+    >
       <nav className="container mx-auto flex items-center justify-between">
         <div className="flex w-full max-w-[4.375rem] items-center md:w-auto md:max-w-full">
           <Link href="/" className="text-xl text-white">
@@ -59,7 +59,9 @@ const Header = () => {
               alt="John Lomat logo"
               width={100}
               height={62}
-              className={`${logoColor}`}
+              className={cn('brightness-[100]', {
+                'brightness-[100] md:brightness-0': pathname === '/',
+              })}
             />
           </Link>
         </div>

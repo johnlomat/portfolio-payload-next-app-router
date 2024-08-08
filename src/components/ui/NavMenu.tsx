@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { cn } from '@/lib/utils'
 
 const NavMenu = ({ isMenuOpen, toggleMenu }: { isMenuOpen: boolean; toggleMenu: () => void }) => {
   const [isClient, setIsClient] = useState(false)
@@ -18,7 +19,10 @@ const NavMenu = ({ isMenuOpen, toggleMenu }: { isMenuOpen: boolean; toggleMenu: 
 
   return (
     <div
-      className={`${isMenuOpen ? 'block' : 'hidden'} absolute right-4 top-4 z-20 w-[90%] max-w-[18.75rem] md:relative md:right-0 md:top-0 md:block md:w-auto md:max-w-full`}
+      className={cn(
+        'absolute right-4 top-4 z-20 hidden w-[90%] max-w-[18.75rem] md:relative md:right-0 md:top-0 md:block md:w-auto md:max-w-full',
+        { block: isMenuOpen },
+      )}
     >
       <button
         onClick={toggleMenu}
