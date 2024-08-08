@@ -16,12 +16,14 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@next/third-parties": "^14.2.5",
     "axios": "^1.7.3",
+    "clsx": "^2.1.1",
     "escape-html": "^1.0.3",
     "flowbite-react": "^0.10.1",
     "next": "14.2.5",
     "nodemailer": "^6.9.14",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
     "@types/escape-html": "^1.0.4",
