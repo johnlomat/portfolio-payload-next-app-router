@@ -3,7 +3,7 @@ import { Open_Sans, Montserrat } from 'next/font/google'
 import { Button, Modal } from 'flowbite-react'
 import serialize from '@/components/richtext/serialize'
 import TechStack from '@/components/ui/TechStack'
-import ProjectCardProps from '@/types/ProjectCardProps'
+import { ProjectProps } from '@/types/ProjectProps'
 import { cn } from '@/lib/utils'
 
 const montserrat = Montserrat({
@@ -26,7 +26,7 @@ const ProjectModal = ({
   screenshot_link,
   isOpen,
   onClose,
-}: ProjectCardProps) => {
+}: ProjectProps) => {
   return (
     <Modal show={isOpen} onClose={onClose}>
       <Modal.Header className={open_sans.className}>{title}</Modal.Header>

@@ -1,20 +1,7 @@
 import React, { Fragment } from 'react'
 import escapeHTML from 'escape-html'
 import { Text } from 'slate'
-
-// eslint-disable-next-line no-use-before-define
-type Children = Leaf[]
-
-type Leaf = {
-  type: string
-  value?: {
-    url: string
-    alt: string
-  }
-  children?: Children
-  url?: string
-  [key: string]: unknown
-}
+import { Children } from '@/types/SlateChildrenProps'
 
 const serialize = (children?: Children): React.ReactNode[] =>
   children?.map((node, i) => {

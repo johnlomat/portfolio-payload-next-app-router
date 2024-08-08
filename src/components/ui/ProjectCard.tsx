@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { Button } from 'flowbite-react'
 import { useState } from 'react'
-import ProjectCardProps from '@/types/ProjectCardProps'
+import { ProjectProps } from '@/types/ProjectProps'
 import ProjectModal from '@/components/ui/ProjectModal'
 
 const ProjectCard = ({
@@ -15,7 +15,7 @@ const ProjectCard = ({
   tech_stacks,
   demo_link,
   screenshot_link,
-}: ProjectCardProps) => {
+}: ProjectProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const handleOpenModal = () => {

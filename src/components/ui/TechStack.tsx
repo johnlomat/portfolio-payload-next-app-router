@@ -1,25 +1,14 @@
 import Image from 'next/image'
 import { Tooltip, Flowbite } from 'flowbite-react'
 import TooltipTheme from '@/components/themes/flowbite-react/TooltipTheme'
-
-interface TechStackProps {
-  technology: {
-    title: string
-    image_details: {
-      alt: string
-      url: string
-      width: number
-      height: number
-    }
-  }
-}
+import { TechnologyProps } from '@/types/TechnologyProps'
 
 const TechStack = ({
   technology: {
     title,
     image_details: { alt, url, width, height },
   },
-}: TechStackProps) => (
+}: TechnologyProps) => (
   <div className="relative flex items-center justify-center">
     <Flowbite theme={{ theme: TooltipTheme }}>
       <Tooltip content={title}>
