@@ -37,10 +37,11 @@ export async function POST(req: NextRequest) {
       },
       { status: 200 },
     )
-  } catch (err: any) {
+  } catch (err) {
+    const errorMessage = (err as Error).message || 'Unknown error occurred'
     return NextResponse.json(
       {
-        error: `Error sending email: ${err.message}`,
+        error: `Error sending email: ${errorMessage}`,
       },
       { status: 500 },
     )
