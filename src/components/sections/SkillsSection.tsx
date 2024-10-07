@@ -1,5 +1,6 @@
 import { HeadingTwo } from '@/components/ui/HeadingPreset'
-import SkillItem from '../ui/SkillItem'
+import SkillItem from '@/components/ui/SkillItem'
+import { TechnologyProps } from '@/types/TechnologyProps'
 
 const SkillsSection = async () => {
   const skillsData = await fetch(`${process.env.PAYLOAD_SITE_URL}/api/skills`, {
@@ -23,7 +24,7 @@ const SkillsSection = async () => {
               <h3>Using now:</h3>
             </div>
             <div className="flex flex-wrap gap-y-12">
-              {usingNow.technologies.map((skill: any, index: number) => (
+              {usingNow.technologies.map((skill: TechnologyProps, index: number) => (
                 <SkillItem key={index} {...skill} />
               ))}
             </div>
@@ -34,7 +35,7 @@ const SkillsSection = async () => {
               <h3>Learning:</h3>
             </div>
             <div className="flex flex-wrap gap-y-12">
-              {learning.technologies.map((skill: any, index: number) => (
+              {learning.technologies.map((skill: TechnologyProps, index: number) => (
                 <SkillItem key={index} {...skill} />
               ))}
             </div>
@@ -45,7 +46,7 @@ const SkillsSection = async () => {
               <h3>Other skills:</h3>
             </div>
             <div className="flex flex-wrap gap-y-12">
-              {otherSkills.technologies.map((skill: any, index: number) => (
+              {otherSkills.technologies.map((skill: TechnologyProps, index: number) => (
                 <SkillItem key={index} {...skill} />
               ))}
             </div>

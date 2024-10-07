@@ -1,5 +1,6 @@
 import ProjectCard from '@/components/ui/ProjectCard'
 import { HeadingTwo } from '@/components/ui/HeadingPreset'
+import { ProjectProps } from '@/types/ProjectProps'
 
 const ProjectsSection = async () => {
   const projectsData = await fetch(`${process.env.PAYLOAD_SITE_URL}/api/projects?limit=999`, {
@@ -17,7 +18,7 @@ const ProjectsSection = async () => {
           </div>
         </div>
         <div className="flex w-full flex-col flex-wrap md:flex-row">
-          {projectsData.map((project: any, index: number) => (
+          {projectsData.map((project: ProjectProps, index: number) => (
             <ProjectCard key={index} {...project} />
           ))}
         </div>
