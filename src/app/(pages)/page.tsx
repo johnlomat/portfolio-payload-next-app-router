@@ -44,7 +44,7 @@ export default async function Home() {
 
   return (
     <div className="page-content">
-      <section className="relative bg-[#969696] bg-none bg-auto bg-no-repeat pt-0 md:pt-12 xl:bg-[#D7D7D7] xl:bg-[url('/images/section-background-1.svg')] xl:bg-[center_right_-20rem] 2xl:bg-right">
+      <section className="relative bg-[#969696] bg-none bg-auto bg-no-repeat pt-0 md:pt-12 xl:bg-[#D7D7D7] xl:bg-[url('/images/section-background-1.svg')] xl:bg-[center_right_-20rem] min-[1500px]:bg-[center_right_-10rem] min-[1800px]:bg-right">
         <div className="container flex flex-wrap space-y-6">
           <div className="bg-top-center absolute bottom-0 left-0 flex w-full items-center bg-[url('/images/rectangle-82.svg')] bg-cover bg-no-repeat px-4 py-[15%] md:static md:bottom-auto md:left-auto md:w-1/2 md:bg-none md:p-0">
             <div className="relative flex w-full flex-col pe-12 pt-[5.625rem] font-raleway md:w-auto md:p-0">
