@@ -35,8 +35,8 @@ export default async function TermsPage() {
       <section className="relative bg-[radial-gradient(ellipse_at_center,_#FFFFFF_5%,#D7D7D7_70%)] py-24 md:pt-40">
         <div className="container flex flex-wrap space-y-6">
           <div className="flex w-full flex-col items-center space-y-20">
-            <div className="w-full max-w-3xl space-y-4 rounded-lg bg-white p-6 shadow-md">
-              <h1 className="text-2xl font-bold">{pageData.title}</h1>
+            <div className="w-full max-w-3xl rounded-lg bg-white p-6 shadow-md [&_h1]:mb-4 [&_h1]:text-2xl [&_h1]:font-bold [&_h2]:mb-2 [&_h2]:text-xl [&_h2]:font-semibold [&_p:last-child]:mb-0 [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:list-disc [&_ul]:pl-5">
+              <h1>{pageData.title}</h1>
               {serialize(pageData.content)}
             </div>
           </div>

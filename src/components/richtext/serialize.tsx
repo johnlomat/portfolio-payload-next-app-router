@@ -45,49 +45,21 @@ const serialize = (children?: Children): React.ReactNode[] =>
 
     switch (node.type) {
       case 'h1':
-        return (
-          <h1 key={i} className="text-xl font-semibold">
-            {serialize(node?.children)}
-          </h1>
-        )
+        return <h1 key={i}>{serialize(node?.children)}</h1>
       case 'h2':
-        return (
-          <h2 key={i} className="text-xl font-semibold">
-            {serialize(node?.children)}
-          </h2>
-        )
+        return <h2 key={i}>{serialize(node?.children)}</h2>
       case 'h3':
-        return (
-          <h3 key={i} className="text-xl font-semibold">
-            {serialize(node?.children)}
-          </h3>
-        )
+        return <h3 key={i}>{serialize(node?.children)}</h3>
       case 'h4':
-        return (
-          <h4 key={i} className="text-xl font-semibold">
-            {serialize(node?.children)}
-          </h4>
-        )
+        return <h4 key={i}>{serialize(node?.children)}</h4>
       case 'h5':
-        return (
-          <h5 key={i} className="text-xl font-semibold">
-            {serialize(node?.children)}
-          </h5>
-        )
+        return <h5 key={i}>{serialize(node?.children)}</h5>
       case 'h6':
-        return (
-          <h6 key={i} className="text-xl font-semibold">
-            {serialize(node?.children)}
-          </h6>
-        )
+        return <h6 key={i}>{serialize(node?.children)}</h6>
       case 'quote':
         return <blockquote key={i}>{serialize(node?.children)}</blockquote>
       case 'ul':
-        return (
-          <ul className="list-disc space-y-1 ps-[1.25rem]" key={i}>
-            {serialize(node?.children)}
-          </ul>
-        )
+        return <ul key={i}>{serialize(node?.children)}</ul>
       case 'ol':
         return <ol key={i}>{serialize(node.children)}</ol>
       case 'li':
