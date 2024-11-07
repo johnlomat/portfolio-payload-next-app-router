@@ -51,7 +51,7 @@ const Header = () => {
         'bg-[#969696] xl:bg-transparent': pathname === '/',
       })}
     >
-      <nav className="container mx-auto flex items-center justify-between">
+      <nav className="container mx-auto flex w-full items-center justify-between lg:w-[95%]">
         <div className="flex w-full max-w-[4.375rem] items-center md:w-auto md:max-w-full">
           <Link href="/" className="text-xl text-white">
             <Image
