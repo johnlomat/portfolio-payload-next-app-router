@@ -44,7 +44,9 @@ const ProjectModal = ({
           </div>
           <div className="w-full">
             <div className={cn(montserrat.className, 'uppercase text-cyan-700')}>Key Features</div>
-            {serialize(key_features)}
+            <div className="[&_ul]:mb-4 [&_ul]:list-disc [&_ul]:space-y-1 [&_ul]:pl-5">
+              {serialize(key_features)}
+            </div>
           </div>
           <div className="w-full">
             <div className={cn(montserrat.className, 'mb-1 uppercase text-cyan-700')}>
