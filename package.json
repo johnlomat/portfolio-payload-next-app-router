@@ -14,26 +14,26 @@
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@next/third-parties": "15.0.2",
+    "@next/third-parties": "15.1.0",
     "axios": "^1.7.3",
     "clsx": "^2.1.1",
     "escape-html": "^1.0.3",
     "flowbite-react": "^0.10.2",
-    "next": "15.0.2",
+    "next": "15.1.0",
     "nodemailer": "^6.9.14",
-    "react": "19.0.0-rc-02c0e824-20241028",
-    "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
     "@types/escape-html": "^1.0.4",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.15",
-    "@types/react": "npm:types-react@19.0.0-rc.1",
-    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.2",
     "autoprefixer": "^10.4.20",
     "eslint": "^8",
-    "eslint-config-next": "15.0.2",
+    "eslint-config-next": "15.1.0",
     "postcss": "^8",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.5",
@@ -42,7 +42,7 @@
     "typescript": "^5"
   },
   "overrides": {
-    "@types/react": "npm:types-react@19.0.0-rc.1",
-    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.2"
   }
 }
