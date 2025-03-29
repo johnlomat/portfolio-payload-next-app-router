@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 import { Raleway, Open_Sans, Montserrat } from 'next/font/google'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -51,6 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-5M87LX5" />
       <body
         className={cn('page-container', raleway.variable, montserrat.variable, open_sans.variable)}
       >
@@ -58,7 +59,6 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
-      <GoogleAnalytics gaId="G-5G05S9L675" />
     </html>
   )
 }
