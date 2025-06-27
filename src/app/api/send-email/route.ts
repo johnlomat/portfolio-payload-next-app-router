@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
   }
 
   const mailOptions = {
-    from: 'Website Inquiry <no-reply@headlesspress.xyz>',
+    from: 'Website Inquiry <no-reply@johnquery.com>',
     to: 'edwardlomat1503@gmail.com',
     replyTo: email,
     subject: `New inquiry from ${name}`,
