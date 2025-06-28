@@ -109,7 +109,7 @@ export default function ContactForm() {
         </Flowbite>
       </form>
       {responseMessage.message && (
-        <Toast className="fixed bottom-4 left-1/2 z-10 m-0 w-4/5 max-w-none -translate-x-1/2 p-4 md:w-auto">
+        <Toast id={responseMessage.isSuccessful ? 'contact-toast-success' : 'contact-toast-error'} className="fixed bottom-4 left-1/2 z-10 m-0 w-4/5 max-w-none -translate-x-1/2 p-4 md:w-auto">
           <FontAwesomeIcon
             icon={responseMessage.isSuccessful ? faCircleCheck : faCircleXmark}
             className={cn('text-2xl text-red-600', {
