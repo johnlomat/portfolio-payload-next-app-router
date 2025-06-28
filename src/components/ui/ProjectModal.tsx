@@ -29,7 +29,7 @@ const ProjectModal = ({
 }: ProjectProps) => {
   return (
     <Modal show={isOpen} onClose={onClose}>
-      <Modal.Header className={open_sans.className}>{title}</Modal.Header>
+      <Modal.Header className={cn(open_sans.className, 'modal-header')}>{title}</Modal.Header>
       <Modal.Body className={open_sans.className}>
         <div className="space-y-6">
           <div className="w-full">
