@@ -20,13 +20,13 @@ export async function POST(req: NextRequest) {
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: Number(process.env.SMTP_PORT),
+    secure: false,
     auth: {
       user: process.env.SMTP_USERNAME,
       pass: process.env.SMTP_PASSWORD,
     },
-    tls: {
-      rejectUnauthorized: false, // This can help with self-signed certificates, remove if not needed
-    },
+    // logger: true,
+    // debug: true,
   })
 
   try {
