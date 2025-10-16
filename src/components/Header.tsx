@@ -1,17 +1,41 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import NavMenu from '@/components/ui/NavMenu'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { cn } from '@/lib/utils'
+import { cva, type VariantProps } from 'class-variance-authority'
 
-const Header = () => {
+const headerVariants = cva('static z-10 w-full py-4 md:absolute', {
+  variants: {
+    variant: {
+      default: 'bg-[#969696]',
+      transparent: 'bg-[#969696] xl:bg-transparent',
+    },
+  },
+  defaultVariants: {
+    variant: 'default',
+  },
+})
+
+const logoVariants = cva('brightness-[100]', {
+  variants: {
+    variant: {
+      default: '',
+      transparent: 'md:brightness-0',
+    },
+  },
+  defaultVariants: {
+    variant: 'default',
+  },
+})
+
+interface HeaderProps extends VariantProps<typeof headerVariants> {}
+
+const Header = ({ variant }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const pathname = usePathname()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -46,11 +70,7 @@ const Header = () => {
   }, [isMenuOpen])
 
   return (
-    <header
-      className={cn('static z-10 w-full bg-[#969696] py-4 md:absolute', {
-        'bg-[#969696] xl:bg-transparent': pathname === '/',
-      })}
-    >
+    <header className={headerVariants({ variant })}>
       <nav className="container mx-auto flex w-full items-center justify-between lg:w-[95%]">
         <div className="flex w-full max-w-[4.375rem] items-center md:w-auto md:max-w-full">
           <Link href="/" className="text-xl text-white">
@@ -59,9 +79,7 @@ const Header = () => {
               alt="John Lomat logo"
               width={100}
               height={62}
-              className={cn('brightness-[100]', {
-                'brightness-[100] md:brightness-0': pathname === '/',
-              })}
+              className={logoVariants({ variant })}
             />
           </Link>
         </div>
