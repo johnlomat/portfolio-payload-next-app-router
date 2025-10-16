@@ -55,7 +55,6 @@ export default function RootLayout({
       <body
         className={cn('page-container', raleway.variable, montserrat.variable, open_sans.variable)}
       >
-        <Header />
         {children}
         <Footer />
       </body>
