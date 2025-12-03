@@ -20,7 +20,7 @@
     "clsx": "^2.1.1",
     "escape-html": "^1.0.3",
     "flowbite-react": "^0.10.2",
-    "next": "15.5.2",
+    "next": "15.5.7",
     "nodemailer": "^7.0.7",
     "react": "19.0.0",
     "react-dom": "19.0.0",
